@@ -1,5 +1,4 @@
-HELP.md
-target/
+HELP.mdtarget/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
@@ -31,7 +30,6 @@ build/
 
 ### VS Code ###
 .vscode/
- .gitignore
         .metadata/
         .mvn/
         mvnw
