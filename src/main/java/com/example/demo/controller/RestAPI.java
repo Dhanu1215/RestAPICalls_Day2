@@ -3,6 +3,7 @@ package com.example.demo.controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -52,5 +53,14 @@ public class RestAPI {
 	@PostMapping("/post")
 	public String sayHello(@RequestBody User user) {
 		return "Hello"+" " + user.getFirstName() + " " + user.getLastName()+" "+"from Bridgelabz";
+	}
+	
+	/**
+	 * Call put method and pass firstname as path variable 
+	 * and lastname as query parameter
+	 */
+	@PutMapping("/put/{firstName}")
+	public String sayHello(@PathVariable String firstName, @RequestParam(value="lastName") String lastName) {
+		return "Hello" +" "+ firstName + " " +lastName+ " "+"from BridgeLabz";
 	}
 }
